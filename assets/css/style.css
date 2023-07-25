@@ -1,0 +1,84 @@
+/* A container context based on inline size /
+  / Apply styles if the container is narrower than 650px */
+
+.main {
+    background-image: url(https://th.bing.com/th/id/OIG.b3VnMTwlkQh_F0d.PuUq?pid=ImgGn);
+    background-color: gray;
+    background-size: 100%;
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+    color: rgb(83, 25, 25);
+}
+.container {
+    margin: 0 auto;
+    border: 10px solid var(--clr-dark);
+    flex-wrap: wrap;
+    border-radius: 10%;
+    display: flex;
+}
+
+.box { 
+    padding: 40px;
+    background-color: rgb(99, 150, 93);
+    margin: 25px;
+    text-align: center;
+    border: 2px solid rgb(36, 85, 47);
+    border: 10%;
+    border-radius: 20%;
+    height: 500px;
+    box-shadow: 25px ;
+}
+
+.diceselect {
+    display: flex;
+    margin: 30px 0;
+    font-size: 25px;
+}
+
+.rollbtn {
+    background-color: #6d1b1b; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20%;
+    display: inline-block;
+    font-size: 30px;
+}
+body {
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Mitr', sans-serif;
+    font-family: 'Rowdies', cursive;
+    font-family: 'Unbounded', cursive;    
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+} 
+
+.box2 {
+    font-size: 40px;
+    flex: 1;
+    background-image: url(https://s3.amazonaws.com/files.thegamecrafter.com/92c0ddc966a229aba479c2669abda01e74c03621);
+}
+
+.choose {
+    background-color: rgb(97, 77, 64);
+    height:250px;
+    border: 10px solid rgb(46, 26, 13);
+    padding: 25px;
+    margin: 35px;
+    display: flex;
+}
+
+h2 {
+    border-bottom: 5px solid black;
+    padding: 3px;
+}
+
+.choose {
+
+}
