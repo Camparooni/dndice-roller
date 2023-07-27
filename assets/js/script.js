@@ -29,7 +29,7 @@ function rollDice(selectedDice) {
 
 
 diceInputs.forEach(input => {
-  input.addEventListener('change', () => {
+input.addEventListener('change', () => {
     if (input.checked) {
       selectedDice = input.id;
       console.log("hello")
