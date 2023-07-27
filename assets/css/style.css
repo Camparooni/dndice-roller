@@ -38,7 +38,7 @@
     font-size: 25px;
 }
 #rollbtn {
-    background-color: #6d1b1b; /* Green */
+    background-color: #6d1b1b;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -52,7 +52,8 @@
 /*adding to button*/
 #rollbtn:hover {
     background-color: #5645a0;
-  }
+}
+
 body {
     font-family: 'Kanit', sans-serif;
     font-family: 'Mitr', sans-serif;
@@ -64,9 +65,13 @@ body {
 } 
 
 .box2 {
-    font-size: 40px;
+    font-size: 30px;
     flex: 1;
     background-image: url(https://s3.amazonaws.com/files.thegamecrafter.com/92c0ddc966a229aba479c2669abda01e74c03621);
+}
+
+.box2 h2 {
+    border-bottom: none;
 }
 
 .choose {

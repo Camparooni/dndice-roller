@@ -9,20 +9,20 @@ let previousRolls = [];
 function rollDice(selectedDice) {
     console.log(selectedDice)
 
-  const diceNumber = Math.floor(Math.random() * selectedDice) + 1;
+    const diceNumber = Math.floor(Math.random() * selectedDice) + 1;
 
-  currentRollInput.value = diceNumber;
-
-
-  previousRolls.push(diceNumber);
+    currentRollInput.value = diceNumber;
 
 
-  if (previousRolls.length > 10) {
+    previousRolls.push(diceNumber);
+
+
+    if (previousRolls.length > 10) {
     previousRolls.shift();
-  }
+}
 
 
-  previousRollsDiv.innerHTML = "Previous Rolls: " + previousRolls;
+    previousRollsDiv.innerHTML = "Previous Rolls: " + previousRolls;
 }
 
 
@@ -31,14 +31,13 @@ function rollDice(selectedDice) {
 diceInputs.forEach(input => {
 input.addEventListener('change', () => {
     if (input.checked) {
-      selectedDice = input.id;
-      console.log("hello")
-      console.log(input.id)
-      console.log(selectedDice)
-      
-      /*rollDice(input.id);*/
+        selectedDice = input.id;
+        console.log("hello")
+        console.log(input.id)
+        console.log(selectedDice)
+    /*rollDice(input.id);*/
     }
-  });
+});
 });
 
 rollbtn.addEventListener('click', () => {rollDice(selectedDice)})
