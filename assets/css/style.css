@@ -51,7 +51,8 @@
 }
 /*adding to button*/
 #rollbtn:hover {
-    background-color: #5645a0;
+    background-color: #8d3f3f;
+    transition: all ease-in-out 250ms;
 }
 
 body {

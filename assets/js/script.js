@@ -19,6 +19,7 @@ function rollDice(selectedDice) {
     }
 
     previousRollsDiv.innerHTML = "Previous Rolls: " + previousRolls;
+
 }
 
 diceInputs.forEach(input => {
