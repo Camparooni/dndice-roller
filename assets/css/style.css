@@ -104,3 +104,53 @@ h2 {
 .previousrolls{
     color: black;
 }
+#currentRoll {
+    display: flex;
+    width: 80%;
+    background-color: transparent;
+    text-align: center;
+    font-size: 120px;
+    border: none;
+    outline: none;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  h3{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .choose {
+    background-color: rgb(97, 77, 64);
+    border: 10px solid rgb(46, 26, 13);
+    padding: 25px;
+    margin: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .previous-rolls-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  #previousrolls{
+    font-size: 25px;
+  }
+  #diceimage{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+  }
+  .hoverbox{
+    position: relative;
+    text-align: center;
+    color: white;
+  }
