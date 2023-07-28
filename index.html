@@ -19,40 +19,43 @@
             <h2>Select a dice</h2>
             <div class="diceselect">
                 <input id="4" type="checkbox" unchecked>
-                <label for="d4">D4</label>
+                <label for="d4" data-image-src="https://cdn.discordapp.com/attachments/1119766683230425138/1133885209310412921/d4_blue.png">D4</label>
             </div>
             <div class="diceselect">
                 <input id="6" type="checkbox" unchecked>
-                <label for="d6">D6</label>
+                <label for="d6" data-image-src="https://cdn.discordapp.com/attachments/1119766683230425138/1133885209310412921/d4_blue.png">D6</label>
             </div>
             <div class="diceselect">
                 <input id="8" type="checkbox" unchecked>
-                <label for="d8">D8</label>
+                <label for="d8" data-image-src="https://cdn.discordapp.com/attachments/1119766683230425138/1133885209310412921/d4_blue.png">D8</label>
             </div>
             <div class="diceselect">
                 <input id="10" type="checkbox" unchecked>
-                <label for="d10">D10</label>
+                <label for="d10" data-image-src="https://cdn.discordapp.com/attachments/1119766683230425138/1133885209310412921/d4_blue.png">D10</label>
             </div>
             <div class="diceselect">
                 <input id="12" type="checkbox" unchecked>
-                <label for="d12">D12</label>
+                <label for="d12" data-image-src="https://cdn.discordapp.com/attachments/1119766683230425138/1133885209310412921/d4_blue.png">D12</label>
             </div>
             <div class="diceselect">
                 <input id="20" type="checkbox" unchecked>
-                <label for="d20">D20</label>
+                <label for="d20" data-image-src="https://cdn.discordapp.com/attachments/1119766683230425138/1133885209310412921/d4_blue.png">D20</label>
             </div>
             <button id="rollbtn">ROLL</button>
         </div>
         <div class="box box2">
-            <h2>YOU ROLLED A...</h2>
-            <input type="text" id="currentRoll" readonly>
+            <div class="result-wrapper">
+                <h3>YOU ROLLED A...</h3>
+                <input type="text" id="currentRoll" readonly>
+            </div>
         </div>
     </div> 
 
     <div class="choose">
-        <h3>previous rolls</h3>
-        <div id="previousRolls"></div>
+        <h3>Previous Rolls</h3>
+        <div id="previousRolls" class="previous-rolls-container"></div>
     </div>
+    
 
     <script src="./assets/js/script.js"></script>
 </body>

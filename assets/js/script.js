@@ -14,21 +14,38 @@ async function getRandomNumber(min, max) {
   }
 }
 
+<<<<<<< HEAD
 async function rollDice(selectedDice) {
   const min = 1;
   const max = selectedDice;
 
   const diceNumber = await getRandomNumber(min, max);
+=======
+    const diceNumber = Math.floor(Math.random() * selectedDice) + 1;
+>>>>>>> 2d4978b4430898f9dd61617034e9c061a00608e5
 
-  currentRollInput.value = diceNumber;
+    currentRollInput.value = diceNumber;
 
+<<<<<<< HEAD
   previousRolls.push(diceNumber);
 
   if (previousRolls.length > 10) {
-    previousRolls.shift();
-  }
+=======
 
+    previousRolls.push(diceNumber);
+
+
+    if (previousRolls.length > 10) {
+>>>>>>> 2d4978b4430898f9dd61617034e9c061a00608e5
+    previousRolls.shift();
+}
+
+<<<<<<< HEAD
   previousRollsDiv.innerHTML = previousRolls;
+=======
+
+    previousRollsDiv.innerHTML = previousRolls;
+>>>>>>> 2d4978b4430898f9dd61617034e9c061a00608e5
 }
 
 const rollbtn = document.getElementById('rollbtn');
@@ -41,14 +58,22 @@ let selectedDice = 6; // Default to D6
 let previousRolls = [];
 
 diceInputs.forEach(input => {
-  input.addEventListener('change', () => {
+input.addEventListener('change', () => {
     if (input.checked) {
+<<<<<<< HEAD
       selectedDice = parseInt(input.value);
       diceImage.src = `./assets/img/d${selectedDice}.png`;
       diceImage.classList.add('visible'); // Show the dice image
       currentRollInput.value = '';
+=======
+        selectedDice = input.id;
+        console.log("hello")
+        console.log(input.id)
+        console.log(selectedDice)
+    /*rollDice(input.id);*/
+>>>>>>> 2d4978b4430898f9dd61617034e9c061a00608e5
     }
-  });
+});
 });
 
 rollbtn.addEventListener('click', () => {
