@@ -1,5 +1,3 @@
-/* A container context based on inline size /
-  / Apply styles if the container is narrower than 650px */
 
 .main {
     background-image: url(https://th.bing.com/th/id/OIG.b3VnMTwlkQh_F0d.PuUq?pid=ImgGn);
@@ -47,9 +45,8 @@
     border-radius: 20%;
     display: inline-block;
     font-size: 30px;
-    cursor: pointer; /*adding to button*/
+    cursor: pointer;
 }
-/*adding to button*/
 #rollbtn:hover {
     background-color: #8d3f3f;
     transition: all ease-in-out 250ms;
