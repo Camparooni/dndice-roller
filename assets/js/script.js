@@ -28,7 +28,7 @@ async function getRandomNumber(min, max) {
 
 
     previousRollsDiv.innerHTML = previousRolls;
-}
+
 
 const rollbtn = document.getElementById('rollbtn');
 const currentRollInput = document.getElementById('currentRoll');
