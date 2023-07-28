@@ -44,15 +44,18 @@
             <button id="rollbtn">ROLL</button>
         </div>
         <div class="box box2">
-            <h2>YOU ROLLED A...</h2>
-            <input type="text" id="currentRoll" readonly>
+            <div class="result-wrapper">
+                <h3>YOU ROLLED A...</h3>
+                <input type="text" id="currentRoll" readonly>
+            </div>
         </div>
     </div> 
 
     <div class="choose">
-        <h3>previous rolls</h3>
-        <div id="previousRolls"></div>
+        <h3>Previous Rolls</h3>
+        <div id="previousRolls" class="previous-rolls-container"></div>
     </div>
+    
 
     <script src="./assets/js/script.js"></script>
 </body>

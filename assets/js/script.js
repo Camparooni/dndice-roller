@@ -22,7 +22,7 @@ function rollDice(selectedDice) {
 }
 
 
-    previousRollsDiv.innerHTML = "Previous Rolls: " + previousRolls;
+    previousRollsDiv.innerHTML = previousRolls;
 }
 
 
