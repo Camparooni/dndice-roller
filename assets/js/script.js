@@ -28,29 +28,6 @@ async function rollDice(selectedDice) {
     previousRolls.shift();
   }
 
-  previousRollsDiv.innerHTML = previousRolls;
-}
-
-const rollbtn = document.getElementById('rollbtn');
-const currentRollInput = document.getElementById('currentRoll');
-const previousRollsDiv = document.getElementById('previousRolls');
-const diceInputs = document.querySelectorAll('input[type="radio"]'); // Corrected the selector for radio inputs
-const diceImage = document.getElementById('diceimage');
-let selectedDice = 6; // Default to D6
-
-let previousRolls = [];
-
-function rollDice() {
-  const diceNumber = Math.floor(Math.random() * selectedDice) + 1;
-
-  currentRollInput.value = diceNumber;
-
-  previousRolls.push(diceNumber);
-
-  if (previousRolls.length > 10) {
-    previousRolls.shift();
-  }
-
   // Set the content of previousRollsDiv here
   previousRollsDiv.innerHTML = "" + previousRolls.join(', ');
 
@@ -70,6 +47,9 @@ function rollDice() {
       "<p>Sweet! It's a Critical Hit!</p>" +
       "</div>";
   }
+
+  // Save previous rolls to localStorage
+  localStorage.setItem('previousRolls', JSON.stringify(previousRolls));
 }
 
 function openModal(modalId) {
@@ -82,19 +62,40 @@ function closeModal() {
   modals.forEach((modal) => (modal.style.display = "none"));
 }
 
-diceInputs.forEach(input => {
-  input.addEventListener('change', () => {
-    if (input.checked) {
-      selectedDice = parseInt(input.value);
-      diceImage.src = `./assets/img/d${selectedDice}.png`;
-      diceImage.classList.add('visible'); // Show the dice image
-      currentRollInput.value = '';
+const rollbtn = document.getElementById('rollbtn');
+const currentRollInput = document.getElementById('currentRoll');
+const previousRollsDiv = document.getElementById('previousRolls');
+const diceInputs = document.querySelectorAll('input[type="radio"]');
+const diceImage = document.getElementById('diceimage');
+let selectedDice = 6; // Default to D6
+
+let previousRolls = [];
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Retrieve previous rolls from localStorage when the page loads
+  const storedPreviousRolls = localStorage.getItem('previousRolls');
+
+  if (storedPreviousRolls) {
+    previousRolls = JSON.parse(storedPreviousRolls);
+
+    // Update the content of previousRollsDiv here
+    previousRollsDiv.innerHTML = "" + previousRolls.join(', ');
+  }
+
+  diceInputs.forEach(input => {
+    input.addEventListener('change', () => {
+      if (input.checked) {
+        selectedDice = parseInt(input.value);
+        diceImage.src = `./assets/img/d${selectedDice}.png`;
+        diceImage.classList.add('visible'); // Show the dice image
+        currentRollInput.value = '';
+      }
+    });
+  });
+
+  rollbtn.addEventListener('click', () => {
+    if (diceImage.classList.contains('visible')) {
+      rollDice(selectedDice);
     }
   });
-});
-
-rollbtn.addEventListener('click', () => {
-  if (diceImage.classList.contains('visible')) {
-    rollDice(selectedDice);
-  }
 });
