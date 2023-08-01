@@ -40,6 +40,48 @@ let selectedDice = 6; // Default to D6
 
 let previousRolls = [];
 
+function rollDice() {
+  const diceNumber = Math.floor(Math.random() * selectedDice) + 1;
+
+  currentRollInput.value = diceNumber;
+
+  previousRolls.push(diceNumber);
+
+  if (previousRolls.length > 10) {
+    previousRolls.shift();
+  }
+
+  // Set the content of previousRollsDiv here
+  previousRollsDiv.innerHTML = "" + previousRolls.join(', ');
+
+  // Check for critical rolls
+  if (diceNumber === 1) {
+    openModal("specialRollModal");
+    document.getElementById("specialRollModal").innerHTML = "<div class='modal-content'>" +
+      "<span class='close-btn' onclick='closeModal()'>&times;</span>" +
+      "<h2>Critical Miss!</h2>" +
+      "<p>Oops! It's a Critical Miss!</p>" +
+      "</div>";
+  } else if (diceNumber === 20) {
+    openModal("specialRollModal");
+    document.getElementById("specialRollModal").innerHTML = "<div class='modal-content'>" +
+      "<span class='close-btn' onclick='closeModal()'>&times;</span>" +
+      "<h2>Critical Hit!</h2>" +
+      "<p>Sweet! It's a Critical Hit!</p>" +
+      "</div>";
+  }
+}
+
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  const modals = document.querySelectorAll(".modal");
+  modals.forEach((modal) => (modal.style.display = "none"));
+}
+
 diceInputs.forEach(input => {
   input.addEventListener('change', () => {
     if (input.checked) {
