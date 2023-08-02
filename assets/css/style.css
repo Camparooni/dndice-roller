@@ -82,7 +82,7 @@ body {
 }
 
 .box2 img.visible {
-    display: block; /* Show the dice image when the 'visible' class is added */
+    display: block;
 }
 
 .choose {

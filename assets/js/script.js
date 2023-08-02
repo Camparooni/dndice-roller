@@ -28,10 +28,8 @@ async function rollDice(selectedDice) {
     previousRolls.shift();
   }
 
-  // Set the content of previousRollsDiv here
   previousRollsDiv.innerHTML = "" + previousRolls.join(', ');
 
-  // Check for critical rolls
   if (diceNumber === 1) {
     openModal("specialRollModal");
     document.getElementById("specialRollModal").innerHTML = "<div class='modal-content'>" +
@@ -48,7 +46,6 @@ async function rollDice(selectedDice) {
       "</div>";
   }
 
-  // Save previous rolls to localStorage
   localStorage.setItem('previousRolls', JSON.stringify(previousRolls));
 }
 
@@ -67,18 +64,17 @@ const currentRollInput = document.getElementById('currentRoll');
 const previousRollsDiv = document.getElementById('previousRolls');
 const diceInputs = document.querySelectorAll('input[type="radio"]');
 const diceImage = document.getElementById('diceimage');
-let selectedDice = 6; // Default to D6
+let selectedDice = 6;
 
 let previousRolls = [];
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Retrieve previous rolls from localStorage when the page loads
+
   const storedPreviousRolls = localStorage.getItem('previousRolls');
 
   if (storedPreviousRolls) {
     previousRolls = JSON.parse(storedPreviousRolls);
 
-    // Update the content of previousRollsDiv here
     previousRollsDiv.innerHTML = "" + previousRolls.join(', ');
   }
 
@@ -87,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (input.checked) {
         selectedDice = parseInt(input.value);
         diceImage.src = `./assets/img/d${selectedDice}.png`;
-        diceImage.classList.add('visible'); // Show the dice image
+        diceImage.classList.add('visible');
         currentRollInput.value = '';
       }
     });
