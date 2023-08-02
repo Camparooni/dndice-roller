@@ -10,7 +10,7 @@
     font-size: 50px;
     color: rgb(83, 25, 25);
 }
-.container {
+.main-x {
     margin: 0 auto;
     border: 10px solid var(--clr-dark);
     flex-wrap: wrap;
@@ -18,7 +18,7 @@
     display: flex;
 }
 
-.box { 
+.square { 
     padding: 40px;
     background-color: rgb(99, 150, 93);
     margin: 25px;
@@ -26,7 +26,6 @@
     border: 2px solid rgb(36, 85, 47);
     border: 10%;
     border-radius: 20%;
-    height: 500px;
     box-shadow: 25px ;
 }
 
