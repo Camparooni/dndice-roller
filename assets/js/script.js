@@ -37,3 +37,18 @@ rollbtn.addEventListener('click', () => {
         rollDice(selectedDice);
     }
 });
+
+const settings = {
+	async: true,
+	crossDomain: true,
+	url: 'https://quotes15.p.rapidapi.com/quotes/random/',
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'c6a6cb4725mshfd40a67188041b9p195f28jsnca5b39f74a50',
+		'X-RapidAPI-Host': 'quotes15.p.rapidapi.com'
+	}
+};
+
+$.ajax(settings).done(function (response) {
+	console.log(response);
+});

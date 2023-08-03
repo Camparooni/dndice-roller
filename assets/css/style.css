@@ -1,6 +1,5 @@
 /* A container context based on inline size /
   / Apply styles if the container is narrower than 650px */
-
 .main {
     background-image: url(https://th.bing.com/th/id/OIG.b3VnMTwlkQh_F0d.PuUq?pid=ImgGn);
     background-color: gray;
@@ -119,13 +118,13 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-  h3{
+}
+h3{
     display: flex;
     justify-content: center;
     align-items: flex-start;
-  }
-  .choose {
+}
+.choose {
     background-color: rgb(97, 77, 64);
     border: 10px solid rgb(46, 26, 13);
     padding: 25px;
@@ -133,25 +132,25 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .previous-rolls-container {
+}
+.previous-rolls-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; 
     max-height: 150px;
     overflow-y: auto;
-  }
-  #previousrolls{
+}
+#previousrolls{
     font-size: 25px;
-  }
-  #diceimage{
+}
+#diceimage{
     display: flex;
     align-items: center;
     justify-self: center;
-  }
-  .hoverbox{
+}
+.hoverbox{
     position: relative;
     text-align: center;
     color: white;
-  }
+}
